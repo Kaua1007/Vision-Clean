@@ -1,0 +1,426 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+:root{
+  --fontep: "Roboto Slab", sans-serif;
+  --fonteTitulo: "Playfair Display", serif;
+}
+
+/* RESET BÁSICO */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  min-height: 100vh;
+  background-color: white;
+}
+
+/* ---------------------------------- */
+/* ✅ CABEÇALHO - HEADER              */
+/* ---------------------------------- */
+header {
+  background-color: #0e2650;
+  color: white;
+  text-align: center;
+  min-height: 100px;
+}
+
+header > h1 {
+  padding-top: 20px;
+  font-variant: small-caps;
+  font-family: var(--fonteTitulo);
+}
+
+header > p {
+  font-size: 20px;
+  font-family: var(--fontep);
+}
+
+.logo{
+  max-width: 120px;
+}
+
+/* ---------------------------------- */
+/* ✅ SEÇÃO: QUEM SOMOS               */
+/* ---------------------------------- */
+
+nav {
+    background-color: #0e2650; /* Fundo preto fosco */
+    padding: 10px; /* Espaçamento interno */
+}
+
+/* Links dentro do nav */
+nav > a {
+    color: white; /* Cor dos links (branco gelo) */
+    padding: 10px; /* Espaçamento interno dos links */
+    text-decoration: none; /* Remove sublinhado dos links */
+}
+
+/* Efeitos ao passar o mouse sobre os links */
+nav > a:hover {
+    background-color: #294d8bfd; /* Cor de fundo ao passar o mouse (cinza chumbo) */
+    color: white; /* Cor do texto muda para dourado */
+    transition-duration: .5s; /* Tempo de transição suave para o efeito */
+    padding: 5px; /* Reduz levemente o espaçamento ao passar o mouse */
+    border-radius: 5px;
+}
+
+nav > .nav-header{
+  font-size: 1.2em;
+  font-family: var(--fonteTitulo);
+}
+
+/* ---------------------------------- */
+/* ✅ SEÇÃO: QUEM SOMOS               */
+/* ---------------------------------- */
+.quem-somos {
+  padding: 40px;
+}
+
+.conteudo-quem-somos {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  flex-wrap: wrap; /* Responsivo */
+}
+
+.conteudo-quem-somos .texto {
+  flex: 1;
+  min-width: 300px;
+  text-align: left;
+  font-size: 1.2em;
+}
+
+.h2texto{
+  font-family: var(--fonteTitulo);
+}
+
+.conteudo-quem-somos .texto > p {
+  text-align: left;
+  color: black;
+  font-size: 1em;
+  font-family: var(--fontep);
+}
+
+.conteudo-quem-somos .imagem img {
+  max-width: 320px;
+  height: auto;
+  border-radius: 12px;
+  margin-top: 20px;
+}
+
+/* ---------------------------------- */
+/* ✅ SEÇÃO: NOSSOS SERVIÇOS          */
+/* (imagem de fundo com parágrafo)    */
+/* ---------------------------------- */
+section#img01 {
+  background-image: url('./imagens/teste01.png');
+  background-position: right center;
+  background-size: cover;
+}
+
+section.imagem {
+  background-color: rgb(34, 34, 34);
+  background-attachment: fixed;
+  background-position: center;
+  box-shadow: 6px 6px 15px 0px rgb(20, 20, 20);
+  text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.068);
+  height: 25vh;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
+  color: white;
+}
+
+section.imagem > h2{
+  font-size: 2em;
+  font-family: var(--fonteTitulo);
+  margin-bottom: 15px;
+}
+
+.pimagem {
+  display: inline-block;
+  padding: 5px;
+  background-color: rgba(0, 0, 0, 0.349);
+  color: white;
+  border-radius: 10px;
+  font-size: 1.5em;
+  font-family: var(--fontep);
+}
+
+/* ---------------------------------- */
+/* ✅ SEÇÃO: LOJA DE PRODUTOS         */
+/* ---------------------------------- */
+.container-produtos {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.lado-mapa {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.mapa {
+  max-width: 450px;
+  height: auto;
+  margin-bottom: 10px;
+  border-radius: 15px;
+}
+
+.botao-mapa {
+  background-color: #007bff;
+  color: white;
+  font-size: 1em;
+  padding: 20px 30px;
+  margin-top: 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.botao-mapa:hover {
+  background-color: #0056b3;
+}
+
+.texto-produtos {
+  max-width: 60%;
+}
+
+.h2produtos {
+  color: black;
+  text-align: right;
+  margin-right: 100px;
+  font-size: 2em;
+  margin-bottom: 20px;
+  font-family: var(--fonteTitulo);
+}
+
+.pnormal {
+  color: black;
+  text-align: right;
+  margin-right: 40px;
+  font-size: 1em;
+  font-family: var(--fontep);
+}
+
+/* ---------------------------------- */
+/* ✅ ESTILO GERAL DAS SEÇÕES         */
+/* ---------------------------------- */
+section {
+  padding-top: 10vh;
+  padding-bottom: 10vh;
+  line-height: 2em;
+  padding-left: 10px;
+}
+
+section > h2, p {
+  color: white;
+  text-align: center;
+}
+
+/* ----------------------------------------  */
+/* ✅ FOTOS GERAIS EMBAIXO DA LOJA          */
+/* ---------------------------------------- */
+
+.categorias {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding: 40px;
+  background-color: white;
+  gap: 20px;
+}
+
+.categoria {
+  flex: 1 1 220px;
+  max-width: 300px;
+  text-align: center;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.categoria img {
+  max-width: 100%;
+  height: auto;
+}
+
+.categoria h3 {
+  font-size: 1.5em;
+  color: #1a1a1a;
+  margin-top: 15px;
+  font-family: 'Playfair Display', serif;
+}
+
+.categoria p {
+  font-size: 1em;
+  color: #444;
+  margin-top: 10px;
+}
+
+/* ----------------------------------------  */
+/* ✅ ESTILO GERAL DO BOTÃO DO ZAP          */
+/* ---------------------------------------- */
+.cotacao {
+  background-color: #0e2650; /* azul escuro */
+  padding: 5px 5px;
+  display: flex;
+  justify-content: center;
+}
+
+.conteudo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.imagem-entregador img {
+  width: 200px;
+  border-radius: 15px;
+}
+
+.texto-cotacao {
+  flex: 1;
+  min-width: 300px;
+  color: white;
+  text-align: left;
+}
+
+.texto-cotacao h2 {
+  font-size: 2.5em;
+  font-weight: bold;
+  margin-bottom: 30px;
+  line-height: 1.3;
+}
+
+.botao-cotacao {
+  display: inline-block;
+  background-color: #1da0cc;
+  color: white;
+  padding: 15px 30px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 1.2em;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.botao-cotacao:hover {
+  background-color: #1da0cc7e;
+}
+
+/* ----------------------------------------  */
+/* ✅ ESTILO GERAL DO RODAPÉ          */
+/* ---------------------------------------- */
+
+footer{
+  color: white;
+  background-color: black;
+  font-size: 1.5em;
+  font-family: var(--fonteTitulo);
+}
+
+.p-footer{
+  text-align: left;
+  margin-left: 20px;
+  margin-top: 20px;
+}
+
+/* ----------------------------------------  */
+/* ✅ CONFIGURAÇÃO PARA O CELULAR           */
+/* ---------------------------------------- */
+
+@media screen and (max-width: 768px) {
+  header > h1 {
+    font-size: 1.8em;
+  }
+
+  header > p {
+    font-size: 1em;
+  }
+
+  nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav > a {
+    padding: 10px 0;
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+
+  .conteudo-quem-somos {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .conteudo-quem-somos .texto,
+  .conteudo-quem-somos .imagem {
+    text-align: center;
+  }
+
+  .container-produtos {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .texto-produtos {
+    max-width: 100%;
+    margin-top: 20px;
+    margin-right: 0;
+  }
+
+  .h2produtos,
+  .pnormal {
+    text-align: center;
+    margin-right: 0;
+  }
+
+  .cotacao {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .texto-cotacao h2 {
+    font-size: 1.8em;
+  }
+
+  .categorias {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .categoria {
+    max-width: 90%;
+  }
+
+  .botao-mapa {
+    width: 100%;
+    text-align: center;
+  }
+
+  .mapa {
+    max-width: 100%;
+  }
+}
